@@ -846,16 +846,7 @@ client.on('message', message => {
     }
 })
 
-client.on('ready', () => {
-   console.log(`----------------`);
-      console.log(`Desert Bot- Script By : Abdou Dz`);
-        console.log(`----------------`);
-      console.log(`ON ${client.guilds.size} Servers '     Script By : Abdou ' `);
-    console.log(`----------------`);
-  console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`*help | Dream server`,"http://twitch.tv/abdoufersaoui_dz")
-client.user.setStatus("dnd")
-});
+
 
 client.on('message',فكك => {
     if (فكك.content == "*فكك") {
@@ -1677,6 +1668,25 @@ client.user.setAvatar(argresult);
     message.channel.sendMessage(`تم تغيير تويتش البوت إلى  ${argresult}`)
 	}
 });
+
+client.on('ready', function(){ //Toxic Codes
+    var ms = 30000 ;//Toxic Codes
+    var setGame = [`*help Dream Server `,` Dream By : Abdou_Dz`];//Toxic Codes
+    var i = -1;//Toxic Codes
+    var j = 0;//Toxic Codes
+    setInterval(function (){//Toxic Codes
+        if( i == -1 ){//Toxic Codes
+            j = 1;//Toxic Codes
+        }
+        if( i == (setGame.length)-1 ){
+            j = -1;
+        }//Toxic Codes
+        i = i+j;//Toxic Codes
+        client.user.setGame(setGame[i],`http://www.twitch.tv/abdoufersaoui_dz`);//Toxic Codes
+    }, ms);30000
+
+});
+
 
 
 
