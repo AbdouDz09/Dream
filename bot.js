@@ -1709,10 +1709,7 @@ return;
             // m.send(`[${m}]`);
             m.send(`${m}`,{embed: bc});
         });
-    }
-    } else {
-        return;
-    }
+
 
 
 
