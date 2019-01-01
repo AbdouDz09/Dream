@@ -1694,15 +1694,15 @@ var prefix = "*";
     if (message.guild) {
    let embed = new Discord.RichEmbed()
     let args = message.content.split(' ').slice(1).join(' ');
-if(message.content.split(' ')[0] == prefix + 'bc+') {/Toxic Codes
+if(message.content.split(' ')[0] == prefix + 'bc+') {
     if (!args[1]) {
 message.channel.send("**bc+ <message>**");
 return;
 }
-        message.guild.members.forEach(m => {/Toxic Codes
+        message.guild.members.forEach(m => {
    if(!message.member.hasPermission('ADMINISTRATOR')) return;
             var bc = new Discord.RichEmbed()
-            .addField('» السيرفر :', `${message.guild.name}`)/Toxic Codes
+            .addField('» السيرفر :', `${message.guild.name}`)
             .addField('» المرسل : ', `${message.author.username}#${message.author.discriminator}`)
             .addField(' » الرسالة : ', args)
             .setColor('#ff0000')
@@ -1710,7 +1710,7 @@ return;
             m.send(`${m}`,{embed: bc});
         });
     }
-    } else {/Toxic Codes
+    } else {
         return;
     }
  client.on("ready", () => {
@@ -1726,10 +1726,10 @@ return;
 });
  
  
- /Toxic Codes
+
 client.on("guildMemberAdd", (member) => {
     let channel = member.guild.channels.get("528564782630961182");
-    if (!channel) {/Toxic Codes
+    if (!channel) {
         console.log("!the channel id it's not correct");
         return;
     }
@@ -1740,11 +1740,11 @@ client.on("guildMemberAdd", (member) => {
     var guild;
     while (!guild)
         guild = client.guilds.get("525580458340384768");
-    guild.fetchInvites().then((data) => {/Toxic Codes
-        data.forEach((Invite, key, map) => {/Toxic Codes
+    guild.fetchInvites().then((data) => {
+        data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
             if (dat[Inv]
-                if (dat[Inv] < Invite.uses) {/Toxic Codes
+                if (dat[Inv] < Invite.uses) {
  channel.send(`تم دعوته بواسطة  ${Invite.inviter} `) ;        
  }
             dat[Inv] = Invite.uses;
