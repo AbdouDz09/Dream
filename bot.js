@@ -1744,7 +1744,7 @@ client.on("guildMemberAdd", (member) => {
         data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
             if (dat[Inv]
-                if (dat[Inv] < Invite.uses) {
+            if (dat[Inv] < Invite.uses) {
  channel.send(`تم دعوته بواسطة  ${Invite.inviter} `) ;        
  }
             dat[Inv] = Invite.uses;
