@@ -1713,7 +1713,45 @@ return;
     } else {/Toxic Codes
         return;
     }
-
+ client.on("ready", () => {
+    var guild;
+    while (!guild)
+        guild = client.guilds.get("اي دي سيرفرك - Server id");
+    guild.fetchInvites().then((data) => {
+        data.forEach((Invite, key, map) => {
+            var Inv = Invite.code;
+            dat[Inv] = Invite.uses;
+        });
+    });
+});
+ 
+ 
+ /Toxic Codes
+client.on("guildMemberAdd", (member) => {
+    let channel = member.guild.channels.get("528564782630961182");
+    if (!channel) {/Toxic Codes
+        console.log("!the channel id it's not correct");
+        return;
+    }
+    if (member.id == client.user.id) {/Toxic Codes
+        return;
+    }
+    console.log('-');
+    var guild;
+    while (!guild)
+        guild = client.guilds.get("525580458340384768");
+    guild.fetchInvites().then((data) => {/Toxic Codes
+        data.forEach((Invite, key, map) => {/Toxic Codes
+            var Inv = Invite.code;
+            if (dat[Inv]
+                if (dat[Inv] < Invite.uses) {/Toxic Codes
+ channel.send(`تم دعوته بواسطة  ${Invite.inviter} `) ;        
+ }
+            dat[Inv] = Invite.uses;
+       
+       });
+    });
+});
 
 
 
