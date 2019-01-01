@@ -1716,7 +1716,7 @@ return;
  client.on("ready", () => {
     var guild;
     while (!guild)
-        guild = client.guilds.get("اي دي سيرفرك - Server id");
+        guild = client.guilds.get("525580458340384768");
     guild.fetchInvites().then((data) => {
         data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
@@ -1733,7 +1733,7 @@ client.on("guildMemberAdd", (member) => {
         console.log("!the channel id it's not correct");
         return;
     }
-    if (member.id == client.user.id) {/Toxic Codes
+    if (member.id == client.user.id) {
         return;
     }
     console.log('-');
