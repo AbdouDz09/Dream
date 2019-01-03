@@ -341,7 +341,7 @@ client.on('message', message => {
                m.delete()
            }, 5000)
              setTimeout(function() {
-               message.channel.send('تم تهكير جهازك راقب ماذا سيحدث تاليا')
+               message.channel.send('تم تهكير تم ارسال توكن في خاص')
            }, 6000)
            });
          }
@@ -1342,13 +1342,13 @@ client.on("guildMemberAdd", member => {
                      ctx.fontSize = '40px';
                      ctx.fillStyle = "#f1f1f1";
                      ctx.textAlign = "center";
-                     ctx.fillText(member.user.username, 198, 148);
+                     ctx.fillText(member.user.username, 285, 560);
 
              let Avatar = Canvas.Image;
                            let ava = new Avatar;
                            ava.src = buf;
                            ctx.beginPath();
-                           ctx.arc(88, 111, 72, 10, Math.PI*2);
+                           ctx.arc(77 , 101, 62, 0, Math.PI*2);
                            ctx.stroke();
                               ctx.clip();
                               ctx.drawImage(ava, 15, 41, 132, 130);  
