@@ -1339,7 +1339,7 @@ client.on("guildMemberAdd", member => {
                      if (err) return console.log(err);
                     
                      ctx.font = "bold 12px Arial";
-                     ctx.fontSize = '20px';
+                     ctx.fontSize = '40px';
                      ctx.fillStyle = "#f1f1f1";
                      ctx.textAlign = "center";
                      ctx.fillText(member.user.username, 200, 150);
@@ -1351,7 +1351,7 @@ client.on("guildMemberAdd", member => {
                            ctx.arc(77, 101, 62, 0, Math.PI*2);
                            ctx.stroke();
                               ctx.clip();
-                              ctx.drawImage(ava, 13, 38, 128, 126);  
+                              ctx.drawImage(ava, 15, 41, 132, 130);  
                       
             
          
