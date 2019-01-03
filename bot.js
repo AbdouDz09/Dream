@@ -1684,8 +1684,13 @@ client.on('ready', function(){ //Toxic Codes
         i = i+j;//Toxic Codes
         client.user.setGame(setGame[i],`http://www.twitch.tv/abdoufersaoui_dz`);//Toxic Codes
     }, ms);30000
-
 });
+
+client.on('ready', () => {
+    console.log(`Logged in as ${client.user.tag} !`);
+	
+});
+
 
 const suck = JSON.parse(fs.readFileSync('./suck.json', 'utf8'));
 
