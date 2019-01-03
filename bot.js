@@ -1342,13 +1342,13 @@ client.on("guildMemberAdd", member => {
                      ctx.fontSize = '40px';
                      ctx.fillStyle = "#f1f1f1";
                      ctx.textAlign = "center";
-                     ctx.fillText(member.user.username, 285, 560);
+                     ctx.fillText(member.user.username, 120, 230);
 
              let Avatar = Canvas.Image;
                            let ava = new Avatar;
                            ava.src = buf;
                            ctx.beginPath();
-                           ctx.arc(77 , 101, 62, 0, Math.PI*2);
+                           ctx.arc(88 , 98, 66, 15, Math.PI*2);
                            ctx.stroke();
                               ctx.clip();
                               ctx.drawImage(ava, 15, 41, 132, 130);  
