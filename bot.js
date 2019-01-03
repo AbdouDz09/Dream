@@ -1413,24 +1413,6 @@ client.on("guildMemberAdd", member => {
      });
  
 
-client.on('guildMemberAdd', msg => { 
-    var embed = new Discord.RichEmbed()
-    .setAuthor(msg.user.username, msg.user.avatarURL)
-    .setThumbnail(msg.user.avatarURL)
-    .setImage('https://cdn.discordapp.com/attachments/520711890436096010/521408331919917057/20181209_203014.png')     
-    .setTitle('New Member!')
-    .setDescription('Welcome To server')
-    .addField('**ID Member:',"" +  msg.user.id, true)
-    .addField('**Tag Member**', msg.user.discriminator, true)
-    .addField('**Member Created At', msg.user.createdAt, true)
-    .addField(' 👤   You Number',`**[ ${msg.guild.memberCount} ]**`,true)
-    .setColor('GREEN')
-    .setFooter(msg.guild.name, msg.guild.iconURL, true)
-    var channel = msg.guild.channels.find('name', 'dream')         
-    if (!channel) return;
-    channel.send({embed : embed});
-    });
-
 
 client.on('message', message => {
      var prefix = "*"
