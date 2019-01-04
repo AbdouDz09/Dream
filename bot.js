@@ -1330,28 +1330,41 @@ client.on("guildMemberAdd", member => {
          ground.src = Background;
          ctx.drawImage(ground, 0, 0, 400, 200);
           
-      
-
-             let url = member.user.displayAvatarURL.endsWith(".webp") ? member.user.displayAvatarURL.slice(100) + ".png" : member.user.displayAvatarURL;
-             jimp.read(url, (err, ava) => {
-                 if (err) return console.log(err);
-                 ava.getBuffer(jimp.MIME_PNG, (err, buf) => {
-                     if (err) return console.log(err);
-                    
-                     ctx.font = "bold 22px Arial";
-                     ctx.fontSize = '40px';
-                     ctx.fillStyle = "#f1f1f1";
-                     ctx.textAlign = "center";
-                     ctx.fillText(member.user.username, 120, 265);
-
-             let Avatar = Canvas.Image;
-                           let ava = new Avatar;
-                           ava.src = buf;
-                           ctx.beginPath();
-                           ctx.arc(80 , 101, 62, 0, Math.PI*2);
-                           ctx.stroke();
-                              ctx.clip();
-                              ctx.drawImage(ava, 15, 41, 132, 130);  
+ 
+			 
+			   let url = member.user.displayAvatarURL.endsWith(".webp") ? member.user.displayAvatarURL.slice(5, -20) + ".png" : member.user.displayAvatarURL;
+                  jimp.read(url, (err, ava) => {
+                      if (err) return console.log(err);
+                      ava.getBuffer(jimp.MIME_PNG, (err, buf) => {
+                   if (err) return console.log(err);
+   
+            ctx.font = '36px Arial';
+            ctx.fontSize = '72px';
+            ctx.fillStyle = "#ffffff";
+            ctx.textAlign = "center";
+            ctx.fillText(member.user.username, 545, 177);
+           
+            ctx.font = '16px Arial Bold';
+            ctx.fontSize = '72px';
+            ctx.fillStyle = "#ffffff";
+            ctx.textAlign = "center";
+            ctx.fillText(`${member.guild.memberCount} Members`, 580, 200);
+           
+            let Avatar = Canvas.Image;
+            let ava = new Avatar;
+            ava.src = buf;
+            ctx.beginPath();
+            ctx.arc(169.5, 148, 126.9, -100, Math.PI * 2, true);
+            ctx.closePath();
+            ctx.clip();
+            ctx.drawImage(ava, 36, 21, 260, 260);
+             
+            let c = member.guild.channels.find('name', `${welcome[member.guild.id].channel}`)
+            if(!c) return;
+            c.sendFile(canvas.toBuffer());
+   
+  });
+			 
                       
             
          
