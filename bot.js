@@ -1372,6 +1372,8 @@ client.on("guildMemberAdd", member => {
        welcomer.send(`<@${member.user.id}> تمت الدعوه من <@${inviter.id}>`);
     }); 
   });
+  })
+  }})
 
 
   client.on('message', msg => {
