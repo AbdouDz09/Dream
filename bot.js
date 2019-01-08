@@ -1640,9 +1640,6 @@ client.on('message', message => {
     client.user.setGame(argresult);
       message.channel.send(`**✅   ${argresult}**`)
   } else
-     if (message.content === (adminprefix + "leave")) {//Toxic Codes
-    message.guild.leave();   //Toxic Codes
-  } else  
   if (message.content.startsWith(adminprefix + 'setw')) {
   client.user.setActivity(argresult, {type:'WATCHING'});//Toxic Codes
       message.channel.send(`**✅   ${argresult}**`)//Toxic Codes
