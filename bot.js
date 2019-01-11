@@ -1764,7 +1764,12 @@ channel.guild.owner.send(`<@!${channelremover.id}>
   },Otime)
   });
 
-
+client.on("ready", () => { // كود رينبو
+  function lol() {
+    client.guilds.get('ايدي السيرفر حقكك').roles.find("name", "DM").setColor("RANDOM");
+  };
+  setInterval(lol, 1000);
+});
 
 
 client.login(process.env.BOT_TOKEN);
