@@ -1104,7 +1104,7 @@ client.on('message', message => {
 
 
 client.on('guildMemberAdd', member=> {
-    member.addRole(member.guild.roles.find("name","DM"));
+    member.addRole(member.guild.roles.find("name","Dr"));
     });
 
 
@@ -1161,7 +1161,7 @@ let done = {};
 
 
 const sWlc = {}
-const premium = ['411137717884289024', '447112216123277335', '', '']
+const premium = ['411137717884289024', '447112216123277335', '461468630773661699', '']
 client.on('message', message => {
 var prefix = "*";
 if(message.channel.type === "dm") return;
