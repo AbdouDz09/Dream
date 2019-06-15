@@ -1161,7 +1161,7 @@ let done = {};
 
 
 const sWlc = {}
-const premium = ['411137717884289024', '447112216123277335', '461468630773661699', '']
+const premium = ['411137717884289024']
 client.on('message', message => {
 var prefix = "*";
 if(message.channel.type === "dm") return;
@@ -1329,7 +1329,7 @@ client.on('message', message => {
 
 
 var adminprefix = "*";
-const devs = ['461468630773661699'];
+const devs = ['461468630773661699','466734861558743041'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
