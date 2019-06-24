@@ -420,7 +420,7 @@ client.on('message', message =>{
         .addField("- Report Time :", message.createdAt.toLocaleString(),true)
         .addField("- Reason :", reason);
     
-        let reportschannel = message.guild.channels.find(`name`, "exhibition");
+        let reportschannel = message.guild.channels.find(`name`, "admin");
         if(!reportschannel) return message.channel.send("You should to make `exhibition` channel.");
     
     
@@ -431,8 +431,8 @@ client.on('message', message =>{
 });
 
  client.on('message', async dream => {
-  if(dream.content.startsWith(prefix + "عرض")) {
-    await dream.channel.send("**نوع العرض**").then(e => {
+  if(dream.content.startsWith(prefix + "التقديم")) {
+    await dream.channel.send("**ماهي أعمالك التي ستقوم بها**").then(e => {
     let filter = m => m.author.id === dream.author.id
     let lan = '';
     let md = '';
@@ -442,13 +442,13 @@ client.on('message', message =>{
       lan = collected.first().content
       collected.first().delete()
 e.delete();
-     dream.channel.send('**مدة العرض**').then(m => {
+     dream.channel.send('**كم عمرك**').then(m => {
 let chaMd = dream.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })
 .then(co => {
   md = co.first().content
         co.first().delete()
         m.delete();
-dream.channel.send('**سعره**').then(ms => {
+dream.channel.send('**ماذا ستقدم لسيرفر**').then(ms => {
 let br = dream.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })
 .then(col => {
   br = col.first().content
@@ -460,11 +460,11 @@ ms.delete()
         setTimeout(() => {
   b.edit(`**تم التقديم وسيتم الرد فـ اقرب وقت**`)
         },2000);
-var gg = dream.guild.channels.find('name', 'exhibition')
+var gg = dream.guild.channels.find('name', 'admin')
 if(!gg) return;
 if(gg) {
 gg.send({embed : new Discord.RichEmbed()
-.setDescription(`**  نوع العرض :question:  : \n ${lan}\nمدة العرض :link: :\n ${md} \n السعر :question: :\n ${br}  \nتم التقديم بواسطة  : <@${message.author.id}> **`)  
+.setDescription(`**  الاعمال :question:  : \n ${lan}\nعمره:link: :\n ${md} \n ماذا تقدم :question: :\n ${br}  \nتم التقديم بواسطة  : <@${message.author.id}> **`)  
           .setFooter(`ادارة السيرفر`)
 .setTimestamp()
 });
