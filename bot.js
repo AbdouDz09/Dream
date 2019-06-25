@@ -383,7 +383,7 @@ var gg = message.guild.channels.find('name', 'admin')
 if(!gg) return;
 if(gg) {
 gg.send({embed : new Discord.RichEmbed()
-.setDescription(`**  اسمك :question:  : \n ${lan}\nعمرك :link: :\n ${md} \n الأعمال :question: :\n ${br}  \nتم التقديم بواسطة  : <@${message.author.id}> **`)  
+.setDescription(`** عمره :question:  : \n ${lan}\nالأعمال :link: :\n ${md} \n ماذا يقدم :gift: :\n ${br}  \nتم التقديم بواسطة  : <@${message.author.id}> **`)  
           .setFooter(`ادارة السيرفر`)
 .setTimestamp()
 });
@@ -1451,7 +1451,80 @@ let rf = message.guild.roles.find('name', `${verifyj[message.guild.id].rolev}`)
         if (err) console.error(err)
       })
     })
-}})
+}})client.on('message', rw => {//Toixc Codes
+  if (rw.content.startsWith('vb')) {//Toixc Codes
+if (!rw.member.hasPermission("MOVE_MEMBERS")) return rw.channel.send("**YOU DONT HAVE PERMISSION** | ❎ ");
+let men = rw.mentions.users.first()//Toixc Codes
+let mas = rw.author//Toixc Codes
+if(!men) return rw.channel.send('``');//Toixc Codes
+rw.guild.channels.forEach(c => {
+c.overwritePermissions(men.id, {//Toixc Codes
+          CONNECT: false
+})
+    })
+const embed = new Discord.RichEmbed()
+.setColor("RANDOM")//Toixc Codes
+.setDescription(`**
+ <@${men.id}>
+YOU CANT JOIN THE VOICE ROOM
+BANNER : <@${rw.author.id}> **`)//Toixc Codes
+.setThumbnail("https://cdn.discordapp.com/attachments/408952032112803850/452090205793681419/fd684707fc14f41663f15ecebf089f06.png")
+         
+client.users.get(men.id).sendEmbed(embed)
+const Embed11 = new Discord.RichEmbed()//Toixc Codes
+.setColor("RANDOM")
+.setAuthor(rw.guild.name, rw.guild.iconURL)
+.setDescription(`          <@${men.id}>
+BANNED//Toixc Codes
+BANNER : <@${rw.author.id}> `)
+.setThumbnail("https://cdn.discordapp.com/attachments/408952032112803850/452090205793681419/fd684707fc14f41663f15ecebf089f06.png")
+rw.channel.sendEmbed(Embed11).then(rw => {rw.delete(10000)})
+    }
+})
+ 
+ //فكه//Toixc Codes
+client.on('message', rw => {//Toixc Codes
+  if (rw.content.startsWith('uvb')) {
+if (!rw.member.hasPermission("MOVE_MEMBERS")) return rw.channel.send("**YOU DONT HAVE PERMISSION** | ❎ ");
+ let men = rw.mentions.users.first()
+ let mas = rw.author//Toixc Codes
+ if(!men) return rw.channel.send('`MANTION THE MEMBER `');//Toixc Codes
+ rw.guild.channels.forEach(c => {//Toixc Codes
+ c.overwritePermissions(men.id, {//Toixc Codes
+         CONNECT: true//Toixc Codes
+ })
+    })//Toixc Codes
+const embed = new Discord.RichEmbed()//Toixc Codes
+.setColor("RANDOM")//Toixc Codes
+.setDescription(`**
+ <@${men.id}>//Toixc Codes
+ Welcome Back
+Back With : <@${rw.author.id}> **`)//Toixc Codes
+.setThumbnail("https://cdn.discordapp.com/attachments/408952032112803850/452093541003296788/start-button-hi.png")
+         
+client.users.get(men.id).sendEmbed(embed)//Toixc Codes
+const Embed11 = new Discord.RichEmbed()//Toixc Codes
+.setColor("RANDOM")
+.setAuthor(rw.guild.name, rw.guild.iconURL)//Toixc Codes
+.setDescription(`          <@${men.id}>
+GO FOR VOICE NOW
+With : <@${rw.author.id}>//Toixc Codes
+`)//Toixc Codes
+.setThumbnail("https://cdn.discordapp.com/attachments/408952032112803850/452093541003296788/start-button-hi.png")
+rw.channel.sendEmbed(Embed11).then(rw => {rw.delete(15000)})//Toixc Codes
+    }//Toixc Codes
+}) //Toixc Codes
+
+
+client.on('message', message => { //Toxic Codes
+    if(message.channel.type === 'dm') {//Toxic Codes
+        var guildID = '588308006500958208'; // <=============== ايدي السيرفر حقك//Toxic Codes
+        if(message.content.includes('discord.gg/')) {//Toxic Codes
+            var member = client.guilds.find(g => g.id === guildID).members.find(m => m.id === message.author.id);//Toxic Codes
+            member.ban({ reason: 'ADS In Private.' }).catch();//Toxic Codes
+        }//Toxic Codes
+    }//Toxic Codes
+});//Toxic Codes
 
 
 
