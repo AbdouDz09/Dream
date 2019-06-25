@@ -1451,7 +1451,10 @@ let rf = message.guild.roles.find('name', `${verifyj[message.guild.id].rolev}`)
         if (err) console.error(err)
       })
     })
-}})client.on('message', rw => {//Toixc Codes
+}})
+
+
+client.on('message', rw => {//Toixc Codes
   if (rw.content.startsWith('vb')) {//Toixc Codes
 if (!rw.member.hasPermission("MOVE_MEMBERS")) return rw.channel.send("**YOU DONT HAVE PERMISSION** | ❎ ");
 let men = rw.mentions.users.first()//Toixc Codes
