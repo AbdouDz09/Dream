@@ -350,8 +350,8 @@ client.on('message', message => {
 
  
  client.on('message', async message => {
-  if(message.content.startsWith(prefix + "طلب")) {
-    await message.channel.send("**اسمك**").then(e => {
+  if(message.content.startsWith(prefix + "التقديم")) {
+    await message.channel.send("**كم عمرك**").then(e => {
     let filter = m => m.author.id === message.author.id
     let lan = '';
     let md = '';
@@ -361,13 +361,13 @@ client.on('message', message => {
       lan = collected.first().content
       collected.first().delete()
 e.delete();
-     message.channel.send('**كم تقدر تدفع**').then(m => {
+     message.channel.send('**ماهي أعمالك التي ستقوم بها**').then(m => {
 let chaMd = message.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })
 .then(co => {
   md = co.first().content
         co.first().delete()
         m.delete();
-message.channel.send('**نوع الطلب تصاميم بوتات الخ**').then(ms => {
+message.channel.send('**ماذا ستقدم اللى السيرفر**').then(ms => {
 let br = message.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })
 .then(col => {
   br = col.first().content
@@ -379,11 +379,11 @@ ms.delete()
         setTimeout(() => {
   b.edit(`**تم التقديم وسيتم الرد فـ اقرب وقت**`)
         },2000);
-var gg = message.guild.channels.find('name', 'orders')
+var gg = message.guild.channels.find('name', 'admin')
 if(!gg) return;
 if(gg) {
 gg.send({embed : new Discord.RichEmbed()
-.setDescription(`**  اسمك :question:  : \n ${lan}\nكم تقدر تدفع :link: :\n ${md} \n طلبك :question: :\n ${br}  \nتم التقديم بواسطة  : <@${message.author.id}> **`)  
+.setDescription(`**  اسمك :question:  : \n ${lan}\nعمرك :link: :\n ${md} \n الأعمال :question: :\n ${br}  \nتم التقديم بواسطة  : <@${message.author.id}> **`)  
           .setFooter(`ادارة السيرفر`)
 .setTimestamp()
 });
@@ -430,54 +430,6 @@ client.on('message', message =>{
     };
 });
 
- client.on('message', async dream => {
-  if(dream.content.startsWith(prefix + "التقديم")) {
-    await dream.channel.send("**ماهي أعمالك التي ستقوم بها**").then(e => {
-    let filter = m => m.author.id === dream.author.id
-    let lan = '';
-    let md = '';
-    let br = '';
-    let chaLan = dream.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })
-    .then(collected => {
-      lan = collected.first().content
-      collected.first().delete()
-e.delete();
-     dream.channel.send('**كم عمرك**').then(m => {
-let chaMd = dream.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })
-.then(co => {
-  md = co.first().content
-        co.first().delete()
-        m.delete();
-dream.channel.send('**ماذا ستقدم لسيرفر**').then(ms => {
-let br = dream.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })
-.then(col => {
-  br = col.first().content
-        col.first().delete()
-
-ms.delete()
-
- dream.channel.send('جاري التقديم ..').then(b => {
-        setTimeout(() => {
-  b.edit(`**تم التقديم وسيتم الرد فـ اقرب وقت**`)
-        },2000);
-var gg = dream.guild.channels.find('name', 'admin')
-if(!gg) return;
-if(gg) {
-gg.send({embed : new Discord.RichEmbed()
-.setDescription(`**  الاعمال :question:  : \n ${lan}\nعمره:link: :\n ${md} \n ماذا تقدم :question: :\n ${br}  \nتم التقديم بواسطة  : <@${message.author.id}> **`)  
-          .setFooter(`ادارة السيرفر`)
-.setTimestamp()
-});
-}        
-})
-})
-})
-})
-})
-})
-})
- }
-})
 
 
 
