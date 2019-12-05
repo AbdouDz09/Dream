@@ -270,7 +270,7 @@ message.author.send(`
 ❧ *move ➺ سحب الشخص الى الروم الي انته فيه
 ❧ *fast ➺ لعبة اسرع
 ❧ *news ➺ اخر تحديثات البوت
-─════════════ {✯By Dream ✯} ════════════─
+─════════════ {✯By 3bdou_ (Abdou,Dz) ✯} ════════════─
 **
 `);
 }
@@ -1056,7 +1056,7 @@ client.on('message', message => {
 
 
 client.on('guildMemberAdd', member=> {
-    member.addRole(member.guild.roles.find("name","New"));
+    member.addRole(member.guild.roles.find("name","Member🌹"));
     });
 
 
@@ -1093,7 +1093,7 @@ client.on('guildMemberAdd', member => {
     .setDescription('***بكل حب واحترام وشوق نستقبلك ونتمنى لك قضآء أجمل اللحظات ولآوقات معنا***')
     .setColor('RANDOM')
     .setImage('https://cdn.discordapp.com/attachments/500642156977848321/521100889419939850/20181209_000503.png')
-var channel = member.guild.channels.find('name', 'dream')
+var channel = member.guild.channels.find('name', 'Welcome')
 if (!channel) return;
 channel.send({embed : embed});
 });
@@ -1136,7 +1136,7 @@ client.on("guildMemberAdd", member => {
   }
   const channel = sWlc[member.guild.id].channel
     const sChannel = sWlc[member.guild.id].channel
-    let welcomer = member.guild.channels.find('name','dream');
+    let welcomer = member.guild.channels.find('name','chat');
     let memberavatar = member.user.avatarURL
       if (!welcomer) return;
       if(welcomer) {
